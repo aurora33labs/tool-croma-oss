@@ -1,0 +1,21 @@
+{
+  "navigation": {
+    "tagline": "croma.aurora33",
+    "themeToggleAriaLabel": "Toggle dark mode",
+    "tool": "Tool",
+    "selfHost": "No limits",
+    "contact": "Contact"
+  },
+  "footer": {
+    "madeWith": "Made with ❤️ and AI, by",
+    "needCustomSolutions": "Need custom solutions for your business?",
+    "links": {
+      "webDevelopment": "Web Development",
+      "consulting": "Consulting",
+      "contact": "Contact Aurora33"
+    },
+    "copyrightText": "All rights reserved",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  }
+}

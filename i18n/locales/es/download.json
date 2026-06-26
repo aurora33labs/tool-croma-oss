@@ -1,0 +1,20 @@
+{
+  "success": {
+    "heading": "¡Listo! ✓",
+    "message": "Tus imágenes han sido optimizadas"
+  },
+  "stats": {
+    "original": "Original",
+    "compressed": "Comprimido",
+    "saved": "Ahorrado",
+    "reduction": "Reducción"
+  },
+  "savingsMessage": "🚀 Con este ahorro, tu sitio cargará más rápido",
+  "downloadButton": "Descargar Imágenes Comprimidas",
+  "leadCapture": {
+    "heading": "¿Te gustó esta herramienta?",
+    "description": "En Aurora33 creamos soluciones web a la medida de tu negocio. Hablemos de tu proyecto.",
+    "subscribeButton": "Contacta a Aurora33"
+  },
+  "resetButton": "Comenzar de Nuevo"
+}

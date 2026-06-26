@@ -1,0 +1,22 @@
+{
+  "dropzone": {
+    "title": "Drag and drop images here",
+    "subtitle": "or click to browse your files",
+    "fileSizeLimit": "For now we only accept files up to 8 MB",
+    "needMore": "Need more? Remove the limits →"
+  },
+  "badges": {
+    "free": "No Installation",
+    "secure": "Secure Processing",
+    "fast": "Fast Compression",
+    "noSignup": "No Sign-up"
+  },
+  "selectedImages": "Selected images",
+  "addMoreImages": "Add more images",
+  "removeButton": "Remove",
+  "errors": {
+    "no_valid_files": "No valid image files selected",
+    "max_files": "Maximum {maxFiles} files allowed",
+    "file_size": "File size exceeds {maxSizeMB}MB limit"
+  }
+}

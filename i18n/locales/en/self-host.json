@@ -1,0 +1,57 @@
+{
+  "eyebrow": "Free and open source",
+  "heading": "Remove the limits",
+  "intro": "The online version has a limit so it can stay free for everyone. Run your own copy and the limit is up to you — and it's still free.",
+  "limits": {
+    "title": "Images at a time",
+    "hosted": "Online version",
+    "local": "Your own copy",
+    "custom": "As many as you want",
+    "customValue": "your call",
+    "perFile": "MB per image"
+  },
+  "easy": {
+    "badge": "Easiest · nothing to install",
+    "title": "Put it online in 1 click",
+    "intro": "Railway creates your own copy and gives you a link to use and share it. There's a free plan to get started.",
+    "deployAlt": "Deploy on Railway",
+    "steps": [
+      "Click the button below.",
+      "Create a free Railway account (with your email or your GitHub account).",
+      "Wait a couple of minutes. Done: you'll have your own link to use Croma."
+    ],
+    "note": "Later you can raise the limit from the Railway dashboard. No coding needed."
+  },
+  "local": {
+    "badge": "For anyone who wants it on their computer",
+    "title": "Install it on your computer",
+    "intro": "A few more steps, but all free and 100% private (your images never leave your machine). Pick your system:",
+    "node": {
+      "title": "1. Install Node.js",
+      "desc": "It's the program Croma needs to run. Download the version marked “LTS” and click Next until it finishes.",
+      "cta": "Download Node.js"
+    },
+    "download": {
+      "title": "2. Download Croma",
+      "desc": "Get the project and unzip the folder wherever you like (your Desktop, for example).",
+      "cta": "Download Croma (ZIP)"
+    },
+    "open": {
+      "title": "3. Open a terminal inside that folder"
+    },
+    "run": {
+      "title": "4. Start Croma",
+      "desc": "Type the first line and press Enter; when it finishes, type the second. Keep it open while you use Croma.",
+      "openAt": "When it tells you to, open this address in your browser:"
+    }
+  },
+  "os": {
+    "mac": "Open the “Terminal” app, type cd followed by a space, drag the Croma folder onto the window, and press Enter.",
+    "windows": "Open the Croma folder, right-click inside it and choose “Open in Terminal”.",
+    "linux": "Right-click inside the Croma folder and choose “Open terminal here”."
+  },
+  "copy": "Copy",
+  "copied": "Copied",
+  "backToTool": "← Back to the tool",
+  "viewRepo": "View the code on GitHub"
+}

@@ -1,0 +1,34 @@
+{
+  "heading": "Compression Settings",
+  "format": {
+    "label": "Output Format",
+    "tooltip": "WebP: Best for web. JPEG: Universal. PNG: Transparency support.",
+    "webp": "WebP (recommended)",
+    "jpeg": "JPEG",
+    "png": "PNG"
+  },
+  "quality": {
+    "label": "Quality: {value}%",
+    "tooltip": "80-90%: Web. 70-80%: Mobile. 90-100%: Print"
+  },
+  "resize": {
+    "label": "Resize (optional)",
+    "tooltip": "1920px: desktop, 1200px: mobile",
+    "widthPlaceholder": "Width (px)",
+    "heightPlaceholder": "Height (px)"
+  },
+  "compressButton": "Compress Images",
+  "compressingButton": "Compressing...",
+  "formatWarning": {
+    "title": "Inefficient conversion detected",
+    "description": "Some of your files are in a more efficient format than the selected output format. This may result in larger files or unnecessary quality loss.",
+    "cancel": "Cancel",
+    "continue": "Continue anyway"
+  },
+  "avifWarning": {
+    "title": "AVIF may take longer than usual",
+    "descriptionFree": "Converting to AVIF is slower than other formats. The process may take up to 3 minutes. Please do not close the tab.",
+    "cancel": "Cancel",
+    "continue": "Got it, continue"
+  }
+}

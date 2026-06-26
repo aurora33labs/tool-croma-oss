@@ -1,0 +1,20 @@
+{
+  "success": {
+    "heading": "Done! ✓",
+    "message": "Your images have been optimized"
+  },
+  "stats": {
+    "original": "Original",
+    "compressed": "Compressed",
+    "saved": "Saved",
+    "reduction": "Reduction"
+  },
+  "savingsMessage": "🚀 With these savings, your site will load faster",
+  "downloadButton": "Download Compressed Images",
+  "leadCapture": {
+    "heading": "Did you like this tool?",
+    "description": "At Aurora33 we build custom web solutions for your business. Let's talk about your project.",
+    "subscribeButton": "Contact Aurora33"
+  },
+  "resetButton": "Start Over"
+}

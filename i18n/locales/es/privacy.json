@@ -1,0 +1,69 @@
+{
+  "heading": "Política de Privacidad",
+  "lastUpdated": "Última actualización: 25 de junio de 2026",
+  "back": "← Volver a Croma",
+  "sections": {
+    "s1": {
+      "title": "1. Quiénes Somos",
+      "body": "Croma es un producto de Aurora33 (nosotros, nos, nuestro). Operamos la herramienta de compresión de imágenes disponible en croma.aurora33.org. Croma no requiere registro ni cuenta y no recopila datos personales identificables. Esta Política explica qué información se trata cuando usas el Servicio."
+    },
+    "s2": {
+      "title": "2. Datos que Tratamos",
+      "intro": "No te pedimos nombre, correo ni contraseña. La única información que interviene es:",
+      "items": [
+        { "label": "Archivos subidos:", "text": "tus imágenes se procesan de forma temporal y se eliminan automáticamente después de una hora. No las almacenamos, inspeccionamos ni compartimos." },
+        { "label": "Datos técnicos:", "text": "registros de servidor temporales (dirección IP, tipo de navegador) generados automáticamente para operar y proteger el Servicio." },
+        { "label": "Preferencias locales:", "text": "tu idioma y tema (claro/oscuro) se guardan en tu propio navegador (localStorage y una cookie de idioma), no en nuestros servidores." }
+      ]
+    },
+    "s3": {
+      "title": "3. Cómo Usamos esta Información",
+      "intro": "La información anterior se usa únicamente para:",
+      "items": [
+        { "label": "Prestación del Servicio:", "text": "recibir, comprimir y devolver tus imágenes." },
+        { "label": "Seguridad y estabilidad:", "text": "prevenir abusos y mantener el Servicio operativo mediante registros técnicos." }
+      ],
+      "outro": "No usamos tus datos para marketing, newsletters ni perfilado, porque no recopilamos ningún dato de contacto."
+    },
+    "s4": {
+      "title": "4. Base Legal del Tratamiento",
+      "intro": "Tratamos la información técnica bajo las siguientes bases legales:",
+      "items": [
+        { "label": "Interés legítimo:", "text": "operar, proteger y mejorar el Servicio." },
+        { "label": "Obligación legal:", "text": "cuando lo exija la ley aplicable." }
+      ]
+    },
+    "s5": {
+      "title": "5. Compartición de Datos",
+      "intro": "No vendemos ni cedemos datos personales. La información técnica puede pasar por:",
+      "items": [
+        { "label": "Proveedor de hosting:", "text": "la infraestructura donde corre el Servicio procesa temporalmente las solicitudes para entregarte el resultado." },
+        { "label": "Autoridades legales:", "text": "solo cuando la ley lo exija o para proteger los derechos y la seguridad de Aurora33 o sus usuarios." }
+      ]
+    },
+    "s6": {
+      "title": "6. Retención de Datos",
+      "body": "Las imágenes subidas se eliminan automáticamente alrededor de una hora después de procesarse. Los registros técnicos se conservan solo el tiempo necesario para operar y proteger el Servicio. Como no hay cuentas, no almacenamos datos personales a largo plazo."
+    },
+    "s8": {
+      "title": "7. Cookies",
+      "body": "Usamos solo una cookie esencial para recordar tu idioma. No usamos cookies de analítica ni publicitarias."
+    },
+    "s9": {
+      "title": "8. Seguridad",
+      "body": "Aplicamos medidas estándar del sector: transporte cifrado HTTPS, borrado automático de los archivos subidos y acceso restringido al servidor. Como no recopilamos contraseñas ni datos de cuenta, no hay credenciales que puedan filtrarse."
+    },
+    "s10": {
+      "title": "9. Cambios en esta Política",
+      "body": "Podemos actualizar esta Política de Privacidad periódicamente. Actualizaremos la fecha de Última actualización en la parte superior de esta página. El uso continuado del Servicio tras los cambios implica tu aceptación de la Política revisada."
+    },
+    "s11": {
+      "title": "10. Contacto",
+      "body": "Para preguntas sobre privacidad, contacta a Aurora33 en"
+    }
+  },
+  "footer": {
+    "terms": "Términos de Servicio",
+    "backToApp": "Volver a Croma"
+  }
+}

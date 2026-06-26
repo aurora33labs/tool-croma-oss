@@ -1,0 +1,129 @@
+'use client';
+
+import { useTranslations, useLocale } from '@/lib/i18n-context';
+
+const AURORA_CONTACT_URL = 'https://aurora33.org/contacto';
+
+interface FileStats {
+  originalSize: number;
+  compressedSize: number;
+  reduction: number;
+}
+
+interface DownloadViewProps {
+  stats?: FileStats;
+  onDownload: () => void;
+  onReset: () => void;
+}
+
+function formatFileSize(bytes: number, locale: string) {
+  if (bytes <= 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  const value = Math.round((bytes / Math.pow(k, i)) * 100) / 100;
+  return new Intl.NumberFormat(locale, { minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(value) + ' ' + sizes[i];
+}
+
+export function DownloadView({ stats, onDownload, onReset }: DownloadViewProps) {
+  const t = useTranslations('download');
+  const tHero = useTranslations('hero');
+  const locale = useLocale();
+
+  const originalSize = stats?.originalSize || 0;
+  const compressedSize = stats?.compressedSize || 0;
+  const savedSize = Math.max(0, originalSize - compressedSize);
+  const savingsPercent = stats?.reduction || 0;
+
+  return (
+    <>
+      <div className="px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[120px] max-w-[1720px] mx-auto mb-4 sm:mb-6 md:mb-8 mt-8 sm:mt-12 md:mt-16">
+        <div className="w-full mb-6 sm:mb-8 md:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary" style={{ lineHeight: '120%' }}>
+            {tHero('title')}<br />{tHero('subtitle')}
+          </h1>
+        </div>
+      </div>
+
+      <div className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[120px] max-w-[1720px] mx-auto mb-4 sm:mb-6 md:mb-8">
+        <div className="bg-white dark:bg-container-dark rounded-none shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 md:p-8 lg:p-12">
+          <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full mb-4">
+            <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <h2 className="text-3xl font-bold text-text dark:text-text-dark mb-2">{t('success.heading')}</h2>
+          <p className="text-text-muted dark:text-text-muted-dark">{t('success.message')}</p>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6 md:mb-8">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-none p-4 text-center">
+            <p className="text-sm text-text-muted dark:text-text-muted-dark uppercase mb-1">{t('stats.original')}</p>
+            <p className="text-lg font-bold text-text dark:text-text-dark">{formatFileSize(originalSize, locale)}</p>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-none p-4 text-center">
+            <p className="text-sm text-text-muted dark:text-text-muted-dark uppercase mb-1">{t('stats.compressed')}</p>
+            <p className="text-lg font-bold text-text dark:text-text-dark">{formatFileSize(compressedSize, locale)}</p>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-none p-4 text-center">
+            <p className="text-sm text-text-muted dark:text-text-muted-dark uppercase mb-1">{t('stats.saved')}</p>
+            <p className="text-lg font-bold text-primary">{formatFileSize(savedSize, locale)}</p>
+          </div>
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-none p-4 text-center">
+            <p className="text-sm text-text-muted dark:text-text-muted-dark uppercase mb-1">{t('stats.reduction')}</p>
+            <p className="text-lg font-bold text-primary">{savingsPercent}%</p>
+          </div>
+        </div>
+
+        {/* Savings Visualization */}
+        <div className="mb-8">
+          <div className="w-full h-12 bg-gray-200 dark:bg-gray-700 rounded-none overflow-hidden relative">
+            <div
+              className="h-full bg-gradient-to-r from-primary to-primary/80 flex items-center justify-end pr-4 text-white font-semibold text-base transition-all duration-1000"
+              style={{ width: `${savingsPercent}%` }}
+            >
+              <span>-{formatFileSize(savedSize, locale)}</span>
+            </div>
+          </div>
+          <p className="text-center text-text-muted dark:text-text-muted-dark mt-3 text-base">
+            {t('savingsMessage')}
+          </p>
+        </div>
+
+        {/* Download Button */}
+        <button
+          onClick={onDownload}
+          className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-8 rounded-none transition-all transform hover:scale-[1.02] active:scale-[0.98] mb-6"
+        >
+          {t('downloadButton')}
+        </button>
+
+        {/* Aurora33 Contact CTA */}
+        <div className="bg-gradient-to-br from-primary/5 dark:from-primary/10 to-primary/10 dark:to-primary/20 border border-primary/20 dark:border-primary/30 rounded-none p-4 sm:p-6 md:p-8 text-center mb-4 sm:mb-6">
+          <h4 className="text-xl font-normal text-text dark:text-text-dark mb-2">{t('leadCapture.heading')}</h4>
+          <p className="text-text-muted dark:text-text-muted-dark mb-4">{t('leadCapture.description')}</p>
+
+          <a
+            href={AURORA_CONTACT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-none transition-all whitespace-nowrap"
+          >
+            {t('leadCapture.subscribeButton')}
+          </a>
+        </div>
+
+        {/* Reset Button */}
+        <button
+          onClick={onReset}
+          className="w-full border-2 border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 text-text dark:text-text-dark font-semibold py-3 px-8 rounded-none transition-colors"
+        >
+          {t('resetButton')}
+        </button>
+      </div>
+      </div>
+    </>
+  );
+}
